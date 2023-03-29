@@ -40,11 +40,16 @@ class BasicView2: View {
             drawCircle(190f,500f,100f,paint)
             paint.style = Paint.Style.FILL_AND_STROKE
             drawCircle(190f,800f,100f,paint)
-
+        }
+        //重新设置画笔
+        paint.run {
             paint.strokeWidth = 5f
             paint.style = Paint.Style.FILL
-            paint.textSize = 36f
+            paint.textSize = 36f //画笔的字体大小
             paint.color = Color.BLACK
+        }
+        //添加文字描述
+        canvas?.run {
             drawText("FILL",160f,350f,paint)
             drawText("STROKE",130f,660f, paint)
             drawText("FILL_AND_STROKE",80f,970f,paint)
